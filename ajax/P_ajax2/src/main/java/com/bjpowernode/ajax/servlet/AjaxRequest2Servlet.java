@@ -1,0 +1,31 @@
+package com.bjpowernode.ajax.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/ajaxrequest2")
+public class AjaxRequest2Servlet extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException,IOException{
+		//Set content type and encoding of the response
+		response.setContentType("text/html;charset=UTF-8");
+		//Get response stream
+		PrintWriter out=response.getWriter();
+		//response
+		//out.print("<font color='red'>User Name already exist!!!</font>");
+		
+		//get data from ajax GET request
+		String usercode = request.getParameter("usercode");
+		String username = request.getParameter("username");
+		
+		out.print("usercode="+usercode+", username="+username);
+	}
+
+}

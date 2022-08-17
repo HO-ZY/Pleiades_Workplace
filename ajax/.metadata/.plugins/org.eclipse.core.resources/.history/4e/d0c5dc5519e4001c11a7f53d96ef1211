@@ -1,0 +1,16 @@
+/**
+ * @ClassName:AjaxRequest3Servlet.java
+ * @version:1.0
+ * @description:P_ajax2
+ * @author:22185
+ * @Create:12:16:03 AM
+ */
+package com.bjpowernode.ajax.servlet;
+
+/**
+ * @author 22185
+ *
+ */
+public class AjaxRequest3Servlet {
+
+}

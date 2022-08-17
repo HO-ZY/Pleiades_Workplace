@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Send AJAX POST request</title>
+</head>
+<body>
+<script type="text/javascript">
+	window.onload=function(){
+		document.getElementById("btn").onclick=function(){
+			//window.alert("Send ajax request")
+			//send ajax GET request
+			//console.log("Send ajax GET request")
+			
+			//1.create AJAX core object: XMLHttpRequest
+			var xhr=new XMLHttpRequest();
+			//2.register callback function
+			//This is a callback function ,This function is called when the status value foXMLHttpRequest`s 
+			//object :readyState change 
+			xhr.onreadystatechange=function(){
+				//the callback function will be called mutiple times
+				//0 -> 1 call one time
+				//1 -> 2 call one time 
+				//2 -> 3 call one time
+				//3 -> 4 call one time
+				//console.log(xhr.readyState)
+				
+				//if value of readyState`s state is 4, it refer to the request completed
+				if(this.readyState==4){
+					//request is completed
+					console.log("request is completed")
+					if(this.status==404){
+						window.alert("Page not found")
+					}else if(this.status==500){
+						window.alert("An error is occured in web server")
+					}else if(this.status==200){
+						window.alert("Request success")
+						document.getElementById("myspan").innerHTML=this.responseText
+					}
+					
+				}
+			}
+			
+			//怎么模拟AJAX提交form表单呢？设置请求头的内容类型（这行代码非常重要！！！！！）application/x-www-form-urlencoded
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+			
+			var usercode=document.getElementById("usercode").value
+			var username=document.getElementById("username").value
+			//3 Open channel
+			xhr.open("POST","/P_ajax2/ajaxPOSTrequest3",true)
+			
+			
+			//4. Send Request
+			xhr.send("username="+username+"sercode="+usercode)
+		}
+	}
+
+</script>
+usercode<input type="text" id="usercode"><br>
+username<input type="text" id="username"><br>
+
+
+
+<button id="btn">send ajax get request</button>
+<br>
+<span id="myspan"></span>
+<div id="mydiv"></div>
+
+</body>
+</html>

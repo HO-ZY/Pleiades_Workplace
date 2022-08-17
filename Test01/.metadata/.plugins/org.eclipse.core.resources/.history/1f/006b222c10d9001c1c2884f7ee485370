@@ -1,0 +1,5 @@
+package com.myspring.test02.impl;
+
+public class SomeServiceImpl {
+
+}

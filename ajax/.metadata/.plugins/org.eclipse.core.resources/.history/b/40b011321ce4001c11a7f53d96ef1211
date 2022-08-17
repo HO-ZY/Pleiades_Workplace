@@ -1,0 +1,13 @@
+package com.bjpowernode.ajax.servlet;
+
+/**
+ * @ClassName:AjaxRequest3Servlet.java
+ * @version:1.0
+ * @description:P_ajax2
+ * @author:22185
+ * @Create:Jun 5, 2022 12:23:00 AM
+ *
+ */
+public class AjaxRequest3Servlet {
+
+}

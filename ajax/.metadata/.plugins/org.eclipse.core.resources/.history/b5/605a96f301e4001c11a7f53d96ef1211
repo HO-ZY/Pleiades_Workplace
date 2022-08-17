@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax GET request</title>
+</head>
+<body>
+<script type="text/javascript">
+	window.onload=function(){
+		document.getElementById("helloBtn").onclick=function(){
+			//send ajax GET request
+			//console.log("Send ajax GET request")
+			
+			//1.create AJAX core object: XMLHttpRequest
+			var xhr=new XMLHttpRequest();
+			//2.register callback function
+			//This is a callback function ,This function is called when the status value foXMLHttpRequest`s 
+			//object :ready State change 
+			xhr.onreadystatechange=function(){
+				//the callback function will be called mutiple times
+				//0 -> 1 call one time
+				//1 -> 2 call one time 
+				//2 -> 3 call one time
+				//3 -> 4 call one time
+				console.log(xhr.readyState)
+			}
+			//3 Open channel
+			//4. Send Request
+		}
+	}
+</script>
+
+<input type="button" value="Send ajax GET request" id="helloBtn">
+
+<div id="mydiv"></div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Send ajax GET request</title>
+</head>
+<body>
+<script type="text/javascript">
+	window.onload=function(){
+		document.getElementById("btn").onclick=function(){
+			window.alert("Send ajax request")
+		}
+	}
+</script>
+
+<button id="btn">send ajax get request</button>
+<span id="myspan"></span>
+
+</body>
+</html>

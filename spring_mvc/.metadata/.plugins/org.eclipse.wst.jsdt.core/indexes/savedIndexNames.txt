@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\22185\OneDrive\JAVA\Pleiades_Workplace\spring_mvc\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+517876125.index
+2716754960.index
+1468178570.index
+2384927308.index
+1088053990.index
+3676352483.index

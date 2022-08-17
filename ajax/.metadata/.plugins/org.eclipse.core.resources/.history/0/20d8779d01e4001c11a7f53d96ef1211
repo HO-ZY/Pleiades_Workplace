@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax GET request</title>
+</head>
+<body>
+<script type="text/javascript">
+	window.onload=function(){
+		document.getElementById("helloBtn").onclick=function(){
+			console.log("Send ajax GET request")
+		}
+	}
+</script>
+
+<input type="button" value="Send ajax GET request" id="helloBtn">
+
+<div id="mydiv"></div>
+
+</body>
+</html>

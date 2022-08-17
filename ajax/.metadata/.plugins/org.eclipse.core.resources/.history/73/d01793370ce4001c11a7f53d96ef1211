@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Send AJAX GET request</title>
+</head>
+<body>
+<script type="text/javascript">
+	window.onload=function(){
+		document.getElementById("btn").onclick=function(){
+			//window.alert("Send ajax request")
+			//send ajax GET request
+			//console.log("Send ajax GET request")
+			
+			//1.create AJAX core object: XMLHttpRequest
+			var xhr=new XMLHttpRequest();
+			//2.register callback function
+			//This is a callback function ,This function is called when the status value foXMLHttpRequest`s 
+			//object :readyState change 
+			xhr.onreadystatechange=function(){
+				//the callback function will be called mutiple times
+				//0 -> 1 call one time
+				//1 -> 2 call one time 
+				//2 -> 3 call one time
+				//3 -> 4 call one time
+				//console.log(xhr.readyState)
+				
+				//if value of readyState`s state is 4, it refer to the request completed
+				if(this.readyState==4){
+					//request is completed
+					console.log("request is completed")
+					if(this.status==404){
+						window.alert("Page not found")
+					}else if(this.status==500){
+						window.alert("An error is occured in web server")
+					}else if(this.status==200){
+						window.alert("Request success")
+						document.getElementById("myspan").innerHTML=this.responseText
+					}
+					
+				}
+			}
+			//3 Open channel
+			xhr.open("GET","/P_ajax2/ajaxrequest2",true)
+			
+			//4. Send Request
+			xhr.send()
+		}
+	}
+
+</script>
+
+<button id="btn">send ajax get request</button>
+<span id="myspan"></span>
+
+</body>
+</html>

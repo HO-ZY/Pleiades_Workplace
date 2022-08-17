@@ -1,0 +1,5 @@
+package com.bjpowernode.ajax.serlet;
+
+public class AjaxRequest1Servlet {
+
+}

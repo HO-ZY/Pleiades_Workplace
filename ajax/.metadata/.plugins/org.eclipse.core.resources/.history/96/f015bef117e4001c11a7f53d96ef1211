@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.bjpowernode.ajax.servlet;
+
+/**
+ * @author 22185
+ *
+ */
+public class AjaxRequest3Servlet {
+
+}
